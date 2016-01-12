@@ -1,0 +1,13 @@
+@import "compass/utilities/sprites";
+
+$bricks-layout: smart;
+$bricks-sprite-dimensions: true;
+
+$covers-layout: smart;
+$covers-sprite-dimensions: true;
+
+@import "bricks/*.png";
+@include all-bricks-sprites;
+
+@import "covers/*.png";
+@include all-covers-sprites;

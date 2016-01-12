@@ -1,0 +1,46 @@
+html {
+	box-sizing: border-box;
+	overflow-y: scroll;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+	vertical-align: middle;
+	border: 0;
+}
+
+pre {
+	overflow: auto;
+	font-family: monospace, monospace;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: square;
+}
+
+.container {
+	margin: auto;
+	width: 60%;
+}
+
+.clearall {
+	clear: both;
+}

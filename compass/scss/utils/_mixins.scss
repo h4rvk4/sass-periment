@@ -1,0 +1,38 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin progress-reset() {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 0;
+}
+
+@mixin progress-bar-webkit($color) {
+	background-image:
+		-webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0,0,0,.1) 33%, rgba(0,0,0,.1) 66%, transparent 66%),
+		-webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0,0,0,.2)),
+		-webkit-linear-gradient(left, $color, $color);
+}
+
+@mixin progress-bar-moz($color) {
+	background-image:
+		-moz-linear-gradient(135deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+		-moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)),
+		-moz-linear-gradient(left, $color, $color);
+}
+
+@mixin progress-status($color) {
+	$color: darken($color, 20);
+	background: $color;
+	background: -moz-radial-gradient(center, ellipse cover, $color 0%, lighten($color, 10) 50%, $color 51%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $color), color-stop(50%, lighten($color, 10)), color-stop(51%, $color));
+	background: -webkit-radial-gradient(center, ellipse cover, $color 0%, lighten($color, 10) 50%, $color 51%);
+	background: -o-radial-gradient(center, ellipse cover, $color 0%, lighten($color, 10) 50%, $color 51%);
+	background: -ms-radial-gradient(center, ellipse cover, $color 0%, lighten($color, 10) 50%, $color 51%);
+	background: radial-gradient(ellipse at center, $color 0%, lighten($color, 10) 50%, $color 51%);
+}
